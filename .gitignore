@@ -1,0 +1,21 @@
+# Build output
+bin/
+obj/
+packages/
+*.user
+*.suo
+*.userprefs
+
+# Local ET rules database
+et_rules.db
+*.db
+
+# Compiled artefacts
+*.dll
+*.pdb
+*.exe
+!nuget.exe
+
+# OS junk
+.DS_Store
+Thumbs.db
