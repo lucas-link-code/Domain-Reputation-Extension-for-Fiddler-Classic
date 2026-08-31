@@ -4,6 +4,23 @@ Fiddler Classic extension for malware traffic review. It watches intercepted HTT
 
 Compiled builds are on the GitHub Releases page. This repository holds the public source used to produce those builds. The project does not include, embed, or ship any API keys.
 
+## API keys
+
+You must supply your own API keys for the features you want to use.
+Keys are not provided!
+
+VirusTotal: required for reputation counts. Create a free or paid account at https://www.virustotal.com/ and generate an API key. Paste it into VT API Key and click Save. Until you save a key, the Error column shows that the API key is not configured.
+
+Emerging Threats: ET Open is the default and is free. No ET Pro key is required. The extension downloads ET Open rules from rules.emergingthreats.net. If you already have an ET Pro key from Proofpoint, paste it into ET Pro Key and click Save ET. Leave that field empty to stay on ET Open.
+
+Do not commit keys into this repository.
+
+VirusTotal keys are stored in the local user settings for this assembly. ET Pro keys are stored in:
+
+```
+%AppData%\DomainReputationInspector\et_rules.db
+```
+
 ## Install the compiled build
 
 Download DomainReputationInspector-1.0.0.zip from [Releases](https://github.com/lucas-link-code/Domain-Reputation-Extension-for-Fiddler-Classic/releases). Extract the folder, then run `install.bat` from that folder.
@@ -28,22 +45,6 @@ You need these files next to `install.bat`:
 Start Fiddler Classic. Open the Domain Reputation tab. Paste your VirusTotal API key and click Save. Leave ET Pro Key empty unless you have an ET Pro key.
 
 `validate_installation.bat` checks that the DLLs landed in the Scripts folder.
-
-## API keys
-
-You must supply your own keys for the features you want to use.
-
-VirusTotal: required for reputation counts. Create a free or paid account at https://www.virustotal.com/ and generate an API key. Paste it into VT API Key and click Save. Until you save a key, the Error column shows that the API key is not configured.
-
-Emerging Threats: ET Open is the default and is free. No ET Pro key is required. The extension downloads ET Open rules from rules.emergingthreats.net. If you already have an ET Pro key from Proofpoint, paste it into ET Pro Key and click Save ET. Leave that field empty to stay on ET Open.
-
-Do not commit keys into this repository.
-
-VirusTotal keys are stored in the local user settings for this assembly. ET Pro keys are stored in:
-
-```
-%AppData%\DomainReputationInspector\et_rules.db
-```
 
 ## What it does
 
